@@ -1,3 +1,16 @@
-components: []
+components:
+- components:
+  - layout_properties: {column: 'null'}
+    name: label_1
+    properties: {text: lbl_rang}
+    type: Label
+  layout_properties: {}
+  name: data_row_panel_1
+  properties: {}
+  type: DataRowPanel
+- layout_properties: {column: 'null'}
+  name: label_2
+  properties: {}
+  type: Label
 container: {type: DataRowPanel}
 is_package: true

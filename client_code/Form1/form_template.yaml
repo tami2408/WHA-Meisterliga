@@ -5,24 +5,22 @@ components:
     properties: {}
     type: DropDown
   - components:
-    - components:
-      - name: repeating_panel_2
-        properties: {item_template: Form1.RowTemplate2}
-        type: RepeatingPanel
-      name: data_grid_1
-      properties:
-        columns:
-        - {data_key: column_1, id: JKSDUP, title: Column 1}
-        - {data_key: column_2, id: VJQQOR, title: Column 2}
-        - {data_key: column_3, id: OJLQEN, title: Column 3}
-      type: DataGrid
-    layout_properties: {grid_position: 'HWNYHS,TTCRDM'}
+    - name: repeating_panel_1
+      properties: {item_template: Form1.RowTemplate2}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'JKCRIS,CSWGUB'}
     name: dg_table
     properties:
       columns:
-      - {data_key: column_1, id: JKSDUP, title: Rang}
-      - {data_key: column_2, id: VJQQOR, title: Column 2}
-      - {data_key: column_3, id: OJLQEN, title: Column 3}
+      - {data_key: column_1, expand: false, id: JKSDUP, title: Rang, width: 70}
+      - {data_key: column_2, id: VJQQOR, title: Mannschaften}
+      - {data_key: column_3, expand: false, id: OJLQEN, title: Begegnungen, width: 125}
+      - {data_key: column_1, expand: false, id: WRMKIW, title: S, width: 50}
+      - {data_key: column_1, expand: false, id: ADAIZF, title: U, width: 50}
+      - {data_key: column_1, expand: false, id: RGPKGP, title: N, width: 50}
+      - {data_key: column_1, expand: false, id: OILAVA, title: Tore, width: 90}
+      - {data_key: column_1, expand: false, id: IXFPIC, title: +/-, width: 80}
+      - {data_key: column_1, expand: false, id: BNQUAS, title: Punkte, width: 90}
     type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
