@@ -12,15 +12,15 @@ components:
     name: dg_table
     properties:
       columns:
-      - {data_key: column_1, expand: false, id: JKSDUP, title: Rang, width: 70}
-      - {data_key: column_2, id: VJQQOR, title: Mannschaften}
-      - {data_key: column_3, expand: false, id: OJLQEN, title: Begegnungen, width: 125}
-      - {data_key: column_1, expand: false, id: WRMKIW, title: S, width: 50}
-      - {data_key: column_1, expand: false, id: ADAIZF, title: U, width: 50}
-      - {data_key: column_1, expand: false, id: RGPKGP, title: N, width: 50}
-      - {data_key: column_1, expand: false, id: OILAVA, title: Tore, width: 90}
-      - {data_key: column_1, expand: false, id: IXFPIC, title: +/-, width: 80}
-      - {data_key: column_1, expand: false, id: BNQUAS, title: Punkte, width: 90}
+      - {data_key: rang, expand: false, id: JKSDUP, title: Rang, width: 70}
+      - {data_key: Mannschaft, expand: false, id: VJQQOR, title: Mannschaften, width: 119}
+      - {data_key: Begegnung, expand: false, id: OJLQEN, title: Begegnungen, width: 125}
+      - {data_key: S, expand: false, id: WRMKIW, title: S, width: 40}
+      - {data_key: U, expand: false, id: ADAIZF, title: U, width: 40}
+      - {data_key: N, expand: false, id: RGPKGP, title: N, width: 40}
+      - {data_key: Tore, expand: false, id: OILAVA, title: Tore, width: 70}
+      - {data_key: Differenz, expand: false, id: IXFPIC, title: +/-, width: 80}
+      - {data_key: Punkte, expand: false, id: BNQUAS, title: Punkte, width: 90}
     type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
