@@ -1,12 +1,13 @@
-from ._anvil_designer import RowTemplate1Template
-from anvil import *
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
+def __init__(self, **properties):
+  self.init_components(**properties)
 
-class RowTemplate1(RowTemplate1Template):
-  def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-
-    # Any code you write here will run before the form opens.
+def form_show(self, **event_args):
+  self.lbl_rang.text = self.item["rang"]
+  self.lbl_mannschaft.text = self.item["mannschaft"]
+  self.lbl_spiele.text = self.item["spiele"]
+  self.lbl_siege.text = self.item["siege"]
+  self.lbl_unentschieden.text = self.item["unentschieden"]
+  self.lbl_niederlagen.text = self.item["niederlagen"]
+  self.lbl_tore.text = self.item["tore"]
+  self.lbl_differenz.text = self.item["differenz"]
+  self.lbl_punkte.text = self.item["punkte"]

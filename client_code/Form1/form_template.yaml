@@ -13,20 +13,25 @@ components:
     properties:
       columns:
       - {data_key: rang, expand: false, id: JKSDUP, title: Rang, width: 70}
-      - {data_key: Mannschaft, expand: false, id: VJQQOR, title: Mannschaften, width: 119}
-      - {data_key: Begegnung, expand: false, id: OJLQEN, title: Begegnungen, width: 125}
-      - {data_key: S, expand: false, id: WRMKIW, title: S, width: 40}
-      - {data_key: U, expand: false, id: ADAIZF, title: U, width: 40}
-      - {data_key: N, expand: false, id: RGPKGP, title: N, width: 40}
-      - {data_key: Tore, expand: false, id: OILAVA, title: Tore, width: 70}
+      - {data_key: mannschaft, expand: false, id: VJQQOR, title: Mannschaften, width: 119}
+      - {data_key: spiele, expand: false, id: OJLQEN, title: Spiele, width: 125}
+      - {data_key: siege, expand: false, id: WRMKIW, title: S, width: 40}
+      - {data_key: 'unentschieden ', expand: false, id: ADAIZF, title: U, width: 40}
+      - {data_key: niederlagen, expand: false, id: RGPKGP, title: N, width: 40}
+      - {data_key: tore, expand: false, id: OILAVA, title: Tore, width: 70}
       - {data_key: Differenz, expand: false, id: IXFPIC, title: +/-, width: 80}
-      - {data_key: Punkte, expand: false, id: BNQUAS, title: Punkte, width: 90}
+      - {data_key: punkte, expand: false, id: BNQUAS, title: Punkte, width: 90}
     type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
   properties: {col_widths: '{}'}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components:
+  - layout_properties: {}
+    name: btn_dashboard
+    properties: {text: Dashboard öffnen}
+    type: Button
+  layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel
