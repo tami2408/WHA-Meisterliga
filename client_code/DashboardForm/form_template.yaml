@@ -1,5 +1,6 @@
 components:
-- layout_properties: {grid_position: 'PZEPSV,WMEYAB'}
+- event_bindings: {}
+  layout_properties: {grid_position: 'PZEPSV,WMEYAB'}
   name: btn_back
   properties: {text: Zurück zur Tabelle}
   type: Button
