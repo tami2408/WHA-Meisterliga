@@ -3,6 +3,7 @@ from anvil import *
 import anvil.server
 import plotly.graph_objects as go
 
+
 class DashboardForm(DashboardFormTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
@@ -69,6 +70,5 @@ class DashboardForm(DashboardFormTemplate):
   def dd_season_change(self, **event_args):
     self.load_charts()
 
-  @handle("btn_back", "click")
   def btn_back_click(self, **event_args):
-    open_form("Form1")
+    open_form(Form1())

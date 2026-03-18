@@ -25,13 +25,11 @@ class StatsForm(StatsFormTemplate):
     self.lbl_avg_points.text = "Durchschnittliche Punkte: " + stats["avg_points"]
     self.lbl_team_count.text = "Anzahl Teams: " + stats["team_count"]
 
-  @handle("dd_season", "change")
   def dd_season_change(self, **event_args):
     self.load_stats()
 
-  @handle("lnk_stats", "click")
-  def lnk_stats_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+  @handle("lnk_back", "click")
+  def lnk_back_click(self, **event_args):
+    open_form("Form1")
 
- 
+  

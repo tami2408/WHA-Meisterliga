@@ -6,6 +6,11 @@ components:
     properties: {text: Dashboard öffnen}
     type: Button
   - event_bindings: {}
+    layout_properties: {grid_position: 'WYKPCB,ITGSXI'}
+    name: lnk_stats
+    properties: {text: Statistik öffnen}
+    type: Button
+  - event_bindings: {}
     layout_properties: {grid_position: 'JLRIKQ,AAMWOB'}
     name: dd_season
     properties: {}

@@ -30,5 +30,6 @@ class Form1(Form1Template):
   def lnk_dashboard_click(self, **event_args):
     open_form(DashboardForm())
 
+  @handle("lnk_stats", "click")
   def lnk_stats_click(self, **event_args):
     open_form(StatsForm())

@@ -6,7 +6,7 @@ components:
   type: DropDown
 - event_bindings: {}
   layout_properties: {grid_position: 'AMKVMG,JTYARJ'}
-  name: lnk_stats
+  name: lnk_back
   properties: {text: Zurück}
   type: Button
 - layout_properties: {grid_position: 'UXQWOE,EJWSIL'}
