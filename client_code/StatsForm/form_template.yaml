@@ -1,0 +1,33 @@
+components:
+- event_bindings: {}
+  layout_properties: {grid_position: 'HQAVVX,MSNFJN'}
+  name: dd_season
+  properties: {}
+  type: DropDown
+- event_bindings: {}
+  layout_properties: {grid_position: 'AMKVMG,JTYARJ'}
+  name: lnk_stats
+  properties: {text: Zurück}
+  type: Button
+- layout_properties: {grid_position: 'UXQWOE,EJWSIL'}
+  name: lbl_best_team
+  properties: {}
+  type: Label
+- layout_properties: {grid_position: 'BYWSKR,OWMFYY'}
+  name: lbl_most_goals
+  properties: {}
+  type: Label
+- layout_properties: {grid_position: 'ABFAUP,MMPJFG'}
+  name: lbl_most_goals_against
+  properties: {}
+  type: Label
+- layout_properties: {grid_position: 'AMQNNV,KZVPBQ'}
+  name: lbl_avg_points
+  properties: {}
+  type: Label
+- layout_properties: {grid_position: 'FAZVWB,LGECZU'}
+  name: lbl_team_count
+  properties: {}
+  type: Label
+container: {type: ColumnPanel}
+is_package: true

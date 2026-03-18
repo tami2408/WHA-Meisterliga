@@ -2,6 +2,7 @@ from ._anvil_designer import Form1Template
 from anvil import *
 import anvil.server
 from ..DashboardForm import DashboardForm
+from ..StatsForm import StatsForm
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -21,12 +22,13 @@ class Form1(Form1Template):
     rows = anvil.server.call("get_table_for_season", season_id)
     self.repeating_panel_1.items = rows
 
-  
+  @handle("dd_season", "change")
   def dd_season_change(self, **event_args):
     self.load_table()
 
-  
-  
   @handle("lnk_dashboard", "click")
   def lnk_dashboard_click(self, **event_args):
-   open_form(DashboardForm())
+    open_form(DashboardForm())
+
+  def lnk_stats_click(self, **event_args):
+    open_form(StatsForm())

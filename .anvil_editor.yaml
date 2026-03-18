@@ -8,6 +8,7 @@ unique_ids:
     Form1.ItemTemplate1: '1772709187321540853923930.52637'
     Form1.RowTemplate1: '1772619889463607236903235.0312'
     Form1.RowTemplate2: '1772620126991459292331792.3121'
+    StatsForm: '1773822566440132860893121.1056'
   modules: {}
   scripts: {}
   server_modules:
