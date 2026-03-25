@@ -71,5 +71,4 @@ class DashboardForm(DashboardFormTemplate):
     self.load_charts()
 
   def btn_back_click(self, **event_args):
-    from ..Form1 import Form1
     open_form(Form1())
