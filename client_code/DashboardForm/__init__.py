@@ -2,7 +2,6 @@ from ._anvil_designer import DashboardFormTemplate
 from anvil import *
 import anvil.server
 import plotly.graph_objects as go
-from ..Form1 import Form1
 
 
 class DashboardForm(DashboardFormTemplate):
@@ -72,4 +71,5 @@ class DashboardForm(DashboardFormTemplate):
     self.load_charts()
 
   def btn_back_click(self, **event_args):
+    from ..Form1 import Form1
     open_form(Form1())

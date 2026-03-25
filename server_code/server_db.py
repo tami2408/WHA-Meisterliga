@@ -1,6 +1,4 @@
 import sqlite3
-import tempfile
-import os
 import anvil.server
 from anvil.files import data_files
 
@@ -8,20 +6,15 @@ DB_FILE = "WHA-Meisterliga.db"
 
 
 def get_conn():
-  db_media = data_files[DB_FILE]
-
-  tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".db")
-  tmp.write(db_media.get_bytes())
-  tmp.close()
-
-  conn = sqlite3.connect(tmp.name)
+  db_path = data_files[DB_FILE]
+  conn = sqlite3.connect(db_path)
   conn.row_factory = sqlite3.Row
-  return conn, tmp.name
+  return conn
 
 
 @anvil.server.callable
 def get_seasons():
-  conn, tmp_path = get_conn()
+  conn = get_conn()
   try:
     cur = conn.cursor()
     cur.execute("""
@@ -33,12 +26,11 @@ def get_seasons():
     return rows
   finally:
     conn.close()
-    os.unlink(tmp_path)
 
 
 @anvil.server.callable
 def get_table_for_season(season_id):
-  conn, tmp_path = get_conn()
+  conn = get_conn()
   try:
     cur = conn.cursor()
     cur.execute("""
@@ -66,12 +58,11 @@ def get_table_for_season(season_id):
     return rows
   finally:
     conn.close()
-    os.unlink(tmp_path)
 
 
 @anvil.server.callable
 def get_points_chart_data(season_id):
-  conn, tmp_path = get_conn()
+  conn = get_conn()
   try:
     cur = conn.cursor()
     cur.execute("""
@@ -88,12 +79,11 @@ def get_points_chart_data(season_id):
     return rows
   finally:
     conn.close()
-    os.unlink(tmp_path)
 
 
 @anvil.server.callable
 def get_goals_chart_data(season_id):
-  conn, tmp_path = get_conn()
+  conn = get_conn()
   try:
     cur = conn.cursor()
     cur.execute("""
@@ -111,12 +101,11 @@ def get_goals_chart_data(season_id):
     return rows
   finally:
     conn.close()
-    os.unlink(tmp_path)
 
 
 @anvil.server.callable
 def get_matches_for_season(season_id):
-  conn, tmp_path = get_conn()
+  conn = get_conn()
   try:
     cur = conn.cursor()
     cur.execute("""
@@ -140,12 +129,11 @@ def get_matches_for_season(season_id):
     return rows
   finally:
     conn.close()
-    os.unlink(tmp_path)
 
 
 @anvil.server.callable
 def get_stats_for_season(season_id):
-  conn, tmp_path = get_conn()
+  conn = get_conn()
   try:
     cur = conn.cursor()
     cur.execute("""
@@ -184,4 +172,3 @@ def get_stats_for_season(season_id):
     }
   finally:
     conn.close()
-    os.unlink(tmp_path)
