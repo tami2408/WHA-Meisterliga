@@ -1,6 +1,8 @@
 from ._anvil_designer import StatsFormTemplate
 from anvil import *
 import anvil.server
+from ..Form1 import Form1
+
 
 class StatsForm(StatsFormTemplate):
   def __init__(self, **properties):
@@ -30,6 +32,4 @@ class StatsForm(StatsFormTemplate):
 
   @handle("lnk_back", "click")
   def lnk_back_click(self, **event_args):
-    open_form("Form1")
-
-  
+    open_form(Form1())
