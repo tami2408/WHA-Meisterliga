@@ -2,7 +2,6 @@ from ._anvil_designer import StatsFormTemplate
 from anvil import *
 import anvil.server
 
-
 class StatsForm(StatsFormTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)

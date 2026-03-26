@@ -70,5 +70,7 @@ class DashboardForm(DashboardFormTemplate):
   def dd_season_change(self, **event_args):
     self.load_charts()
 
+  @handle("btn_back", "click")
   def btn_back_click(self, **event_args):
+    from ..Form1 import Form1
     open_form(Form1())
